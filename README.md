@@ -16,7 +16,6 @@ This API is for very specific segment of machine fabrication by using laser cuti
 ## API documentation
 - incoming documentation
 
-
 ## How to use it?
 1. clone this git repo
 2. Install nodeJS if you havent yet.
