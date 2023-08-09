@@ -13,5 +13,4 @@ This API is for very specific segment of machine fabrication by using laser cuti
 ## Future goals
 - [ ] Ability to create new formulas for generaing final cost.
 
-
 ## API documentation
