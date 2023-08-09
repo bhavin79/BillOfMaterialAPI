@@ -14,3 +14,4 @@ This API is for very specific segment of machine fabrication by using laser cuti
 - [ ] Ability to create new formulas for generaing final cost.
 
 ## API documentation
+- incoming documentation
