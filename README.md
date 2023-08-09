@@ -1,8 +1,7 @@
 # BillOfMaterialAPI
 
 ## TL;DR
-This is a RESTful API developed using ExpressJS, Mongoose, and MongoDB. JWT is implemented for authorization and securying API endpoints. "bcrypt" is used for genrating hash for passwords. 
-"Express-rate-limit" is used to limit the access to API per user per window of time. To overcome usual security vulnerability "helmet" middleware is used. 
+This is a RESTful API developed using ExpressJS, Mongoose, and MongoDB. JWT is implemented for authorization and securing API endpoints. 'bcrypt' is used for generating hashes for passwords. The 'express-rate-limit' middleware is employed to limit API access per user within a specified time window. To mitigate common security vulnerabilities, the 'helmet' middleware is also utilized
 
 ## Long verison
 A Bill of Materials (BOM) is a structured list that outlines all the components, materials, parts, and sub-assemblies needed to manufacture a product or build a project. It's a comprehensive document that provides detailed information about the quantities, descriptions, part numbers, and sometimes costs of each item required for the final product.
