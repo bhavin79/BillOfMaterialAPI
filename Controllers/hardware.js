@@ -1,15 +1,14 @@
-// const products = require("../Database/models/products");
 import {wrapper} from '../middleware/wrapper.js';
 import {hardwareService} from "../Services/hardwareServices.js"
-
 const getAllHardware = wrapper(async(req, res)=>{
     const result = await hardwareService.getAllHardwareService();
     res.status(200).json({data:result}); 
 });
 
 const getHardware = wrapper(async (req, res) =>{  
-    const result = await hardwareService.getSingleHardwareService(req.params.id);
-    res.status(200).json({data: result});
+    //call the service
+     const result = await hardwareService.getSingleHardwareService(req.params.id);  
+     res.status(200).json({data: result});
 });
 
 const postHardware = wrapper( async (req, res) =>{  
@@ -18,7 +17,6 @@ const postHardware = wrapper( async (req, res) =>{
     const result = await hardwareService.postHardwareService(req.body);
     res.status(200).json({data: result});
 });
-
 
 const patchHardware = wrapper( async (req, res) =>{
     

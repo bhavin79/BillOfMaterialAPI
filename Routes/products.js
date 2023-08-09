@@ -1,7 +1,6 @@
 import express from "express";
 const routes = express.Router();
 
-
 import  {getRate, patchtRate} from "../Controllers/rate.js"
 import {getHardware, postHardware, patchHardware, getAllHardware, addHardwareToProduct} from '../Controllers/hardware.js';
 import {getProduct, getAllProduct, postProduct, patchProduct}  from '../Controllers/products.js';
