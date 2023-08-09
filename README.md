@@ -1,7 +1,7 @@
 # BillOfMaterialAPI
 
 ## TL;DR
-Its a RESTful API developed using ExpressJS, Mongoose, and MongoDB. JWT is implemented for authorization and securying API endpoints. "bcrypt" is used for genrating hash for passwords. 
+This is a RESTful API developed using ExpressJS, Mongoose, and MongoDB. JWT is implemented for authorization and securying API endpoints. "bcrypt" is used for genrating hash for passwords. 
 "Express-rate-limit" is used to limit the access to API per user per window of time. To overcome usual security vulnerability "helmet" middleware is used. 
 
 ## Long verison
