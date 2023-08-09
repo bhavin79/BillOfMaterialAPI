@@ -22,6 +22,6 @@ This API is for very specific segment of machine fabrication by using laser cuti
 2. Install nodeJS if you havent yet.
 3. Run following command "Npm i" at the root directory for the project.
 4. set up .env file which includes  3 variables
-   a. MONGO_URI = your_mongodb_atlas_url
-   b. JWT_SECRET = your_secret_string
-   c. JWT_LIFETIME = time for jwt token to expire
+   - MONGO_URI = your_mongodb_atlas_url
+   - JWT_SECRET = your_secret_string
+   - JWT_LIFETIME = time for jwt token to expire
