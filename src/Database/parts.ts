@@ -1,14 +1,12 @@
-import parts from "../Database/models/parts.js";
+import parts from "./models/parts.js";
 
-const getPart = async (id) =>{
-    let result;
+const getPart = async (id:string|null):Promise<object> =>{
     if(!id){
-        result = await parts.find({});
+       return await parts.find({});
     }
     else{
-        result = await parts.findById(id);
+        return await parts.findById(id);
     }
-    return result;
 }
 
 const postPart = async (data)=>{

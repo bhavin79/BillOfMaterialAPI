@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 
-export const validString = (string, parameter = "input", maxLength = null) => {
+export const validString = (string:string, parameter = "input", maxLength:number|null = null):string => {
   if (string === undefined || !string || typeof string !== "string")
     throw `${parameter} does not exist or is not a string`;
 
@@ -16,14 +16,14 @@ export const validString = (string, parameter = "input", maxLength = null) => {
   return string;
 };
 
- export const validObjectId = (id, parameter = "input") => {
+ export const validObjectId = (id:string, parameter = "input"):string => {
   id = validString(id, parameter);
   if (!ObjectId.isValid(id)) throw `Valid ObjectId required for ${parameter}`;
   return id;
 };
 
 
- export const validNumber = (num, parameter = "input", min = null, max = null) => {
+ export const validNumber = (num:string, parameter = "input", min = null, max = null):number => {
     if (typeof num == "undefined") {
       throw `${parameter} should be provided`;
     }
@@ -32,22 +32,22 @@ export const validString = (string, parameter = "input", maxLength = null) => {
     if(!regex.test(num)){
         throw `should be a valid number`
     }
-    num = Number(num);
+    let numb = Number(num);
     
     if (min) {
-      if (num < min) {
+      if (numb < min) {
         throw `${parameter} can must be greater than ${min}`;
       }
     }
     if (max) {
-      if (num > max) {
+      if (numb > max) {
         throw `${parameter} can must be less than ${max}`;
       }
     }
-    return num;
+    return numb;
   };
 
-export const validEmail = (email) => {
+export const validEmail = (email:string):string => {
     email = validString(email, "email");
     const regex = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
     if (!regex.test(email)) {
@@ -57,7 +57,7 @@ export const validEmail = (email) => {
     return email.toLowerCase();
   };
   
-  export const validPassword = (pass)=>{
+  export const validPassword = (pass:string): string=>{
     pass = validString(pass, "password",15);
     if(pass.length<8){
         throw `Password length should be a minimum of 8`;

@@ -2,7 +2,7 @@ import { validEmail, validPassword } from "../utils/validation.js";
 import hash from "../utils/encryption.js";
 import users from "./models/authentication.js";
 
-export const getUser = async (email) => {
+export const getUser = async (email:string):Promise<object> => {
     //validation
     email = validEmail(email);
     //databse query
@@ -15,7 +15,7 @@ export const getUser = async (email) => {
     return user;
   };
 
-export const addUser = async(email, password)=>{
+export const addUser = async(email:string, password:string):Promise<string>=>{
 
     //validation
     email = validEmail(email);

@@ -1,6 +1,7 @@
+import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 
-const jwtVerify = async (req, res, next) => {
+const jwtVerify = async (req:Request, res:Response, next:NextFunction) => {
   // check header
   const header = req.headers.authorization;
   if(typeof header != "undefined"){

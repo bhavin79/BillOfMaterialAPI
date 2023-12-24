@@ -1,11 +1,11 @@
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
 const saltRounds= 10;
 
 const getSaltRounds = ()=>{
     return saltRounds;
 }
 
-const generateHash = async (secret)=>{
+const generateHash = async (secret:string):Promise<string>=>{
     let hash;
     try {
         hash = await bcrypt.hash(secret, saltRounds);
@@ -15,7 +15,7 @@ const generateHash = async (secret)=>{
     return hash;
 }
 
-const compareHash = async (secret, hash)=>{
+const compareHash = async (secret:string, hash:string):Promise<boolean>=>{
     let bool
     try {
         bool = await bcrypt.compare(secret, hash);

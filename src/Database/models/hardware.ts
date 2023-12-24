@@ -1,6 +1,6 @@
 import mongoose  from "mongoose";
 
-const hardwareSchema = mongoose.Schema({
+const hardwareSchema =new mongoose.Schema({
     "Description":{
         type: String,
         trim:true,

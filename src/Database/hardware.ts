@@ -1,6 +1,6 @@
-import hardware from "../Database/models/hardware.js";
+import hardware from "./models/hardware.js";
 
-let getHardware = async(id)=>{
+let getHardware = async(id:string):Promise<object>=>{
     let result;
     if(!id){
         result = await hardware.find();
@@ -12,12 +12,12 @@ let getHardware = async(id)=>{
 }
 
 
-const postHardware =  async (json) =>{
+const postHardware =  async (json:object):Promise<object> =>{
     const result = await hardware.create(json);
     return result;
  }
 
-const patchHardware =  async (id, json) =>{
+const patchHardware =  async (id:string, json:object):Promise<object> =>{
     const result = await hardware.findOneAndUpdate({_id: id}, json,{new: true,  runValidators: true} )
     return result;
 }
